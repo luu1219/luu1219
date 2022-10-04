@@ -1,0 +1,574 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Serif TC', serif;
+}
+
+.header {
+    background: linear-gradient(rgba(0, 0, 100, 0.5), rgba(0, 0, 100, 0.5)), url(images/sky.png);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    line-height: 60px;
+    z-index: 99;
+
+}
+
+nav ul {
+    float: right;
+    margin: 0;
+    padding-right: 42px;
+}
+
+nav img {
+    height: 48px;
+    float: left;
+    margin: 16px 48px;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #C48888;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+nav.black {
+    flex: 1;
+    background: #66cdaa;
+    overflow: hidden;
+    border-radius: 100px
+}
+
+.text-box {
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1 {
+    font-size: 50px;
+
+}
+
+.text-box p {
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: #fff;
+    line-height: 24px;
+
+
+}
+
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.hero-btn:hover {
+    border: 1px solid #66B3FF;
+    background: #66B3FF;
+    transition: 0.1s;
+}
+
+nav .fa {
+    font-weight: 900;
+    display: none;
+}
+
+@media(max-width: 700px) {
+    .text-box h1 {
+        font-size: 24px;
+    }
+
+    .nav-links ul li {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        background: #66B3FF;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 3;
+        transition: 1s;
+    }
+
+    nav .fa {
+
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    .nav-links ul {
+        padding: 30px;
+
+    }
+
+}
+
+/*-----------mydata-----------*/
+
+.mydata {
+    width: 100%;
+    background-color: #ffe4e1;
+
+}
+
+.mydata-col2 {
+    text-align: center;
+    letter-spacing: 5px;
+
+}
+
+.habbits {
+    margin: 0 auto;
+}
+
+.habbits h2 {
+    text-align: center;
+}
+
+.habbits li {
+    line-height: 24px;
+    text-align: center;
+}
+
+@media(max-width: 700px) {
+    .mydata-col2 h1 {
+        font-size: 30px;
+    }
+
+    .mydata-col2 p {
+        font-size: 18px;
+    }
+}
+
+/*-------- school --------*/
+.school {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+p {
+    color: #777;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.row {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.row-2 {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-around
+}
+
+.school-col {
+    flex-basis: 31%;
+    background: #ffcccc;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+h3 {
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.school-col li {
+    text-align: left;
+    margin-left: 30px;
+}
+
+.school-col:hover {
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+.school-awards {
+    background-color: #FFDDAA;
+    border-radius: 10px;
+    width: 400px;
+    margin: 0 auto;
+
+}
+
+.school-awards p1 {
+    line-height: 30px;
+    color: #777;
+}
+
+@media(max-width: 700px) {
+
+    .row,
+    .row-2 {
+        flex-direction: column;
+    }
+
+    .school-awards {
+        width: 100%;
+    }
+}
+
+/*-------myskill--------*/
+
+.myskill {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    background-color: #fff;
+}
+
+.myskill-col {
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    display: inline-block;
+}
+
+.myskill-col img {
+    width: 40%;
+    border-radius: 10px;
+    max-height: 200px;
+    max-width: 200px;
+}
+
+.myskill-col p {
+    padding: 0;
+}
+
+.myskill-col h3 {
+    margin-top: 16px;
+    margin-bottom: 15px;
+    vertical-align: middle;
+}
+
+@media(max-width: 700px) {
+    .myskill-col {
+        width: 30%;
+    }
+
+    .myskill-col h3 {
+        font-size: 12px;
+    }
+
+}
+
+/*----------work------------*/
+
+* {
+    box-sizing: border-box;
+}
+
+.work-col {
+    background-color: #ccff99;
+    width: 100%;
+    padding-left: 15%;
+    align-items: center;
+
+}
+
+.work h1 {
+    text-align: center;
+    background-color: #ccff99;
+}
+
+.work-col img {
+    width: 40%;
+    border-radius: 20px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.work-col p1{
+    display: inline-block;
+    width: 50%;
+    vertical-align: middle;
+    padding-left: 30px;
+    font-size: 20px;
+    color: #007979;
+}
+
+@media(max-width: 700px){
+    .work-col p1{
+        font-size: 13px;
+        
+    }
+}
+
+/*------------contact-------------*/
+
+
+.cta {
+    padding: 100px 0;
+    background-color: #ccff99;
+}
+
+.cta img {
+    border-radius: 40px;
+    height: auto;
+    max-width: 80%;
+    /*
+    max-height: 300px;
+    max-height: 300px;
+*/
+    display: block;
+    margin: auto;
+}
+
+@media(max-width: 700px) {
+    .cta img {
+        height: auto;
+        max-width: 80%;
+    }
+}
+
+
+/*-------------footer---------------*/
+
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    background-color: #ffffbb;
+}
+
+.footer h4 {
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.icons .fa {
+    color: #f44336;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+
+.fa-heart-o {
+    color: #f44336;
+}
+
+
+/*-----------go to top--------*/
+.toTop-arrow {
+    width: 3rem;
+    height: 3rem;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    border-radius: 33%;
+    opacity: 0.6;
+    background: #deb887;
+    cursor: pointer;
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    display: none;
+}
+
+.toTop-arrow::before,
+.toTop-arrow::after {
+    width: 25px;
+    height: 6px;
+    border-radius: 3px;
+    background: #ff6347;
+    position: absolute;
+    content: "";
+}
+
+.toTop-arrow::before {
+    transform: rotate(-45deg) translate(0, -50%);
+    left: 0.42rem;
+}
+
+.toTop-arrow::after {
+    transform: rotate(45deg) translate(0, -50%);
+    right: 0.42rem;
+}
+
+.toTop-arrow:focus {
+    outline: none;
+}
+
+/*-----------preloader-----------*/
+#preloader {
+    background: #aec1d3 url(images/spinner.gif) no-repeat center center;
+    background-size: 10%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+/*--------slideshow---------*/
+
+/** {box-sizing: border-box}*/
+.slides {
+    background-color: #ffe4e1;
+    padding-top: 100px;
+
+}
+
+.mySlides {
+
+    display: none;
+
+}
+
+.mySlides img {
+    vertical-align: middle;
+    border-radius: 30px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 30%;
+    position: relative;
+    margin: auto;
+}
+
+
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 5px 5px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 5px 0 0 5px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
